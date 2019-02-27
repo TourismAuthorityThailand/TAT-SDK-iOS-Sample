@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B444336B2223988900622171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444336A2223988900622171 /* AppDelegate.swift */; };
+		B444336D2223988900622171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444336C2223988900622171 /* ViewController.swift */; };
+		B44433702223988900622171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B444336E2223988900622171 /* Main.storyboard */; };
+		B44433722223988B00622171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44433712223988B00622171 /* Assets.xcassets */; };
+		B44433752223988B00622171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44433732223988B00622171 /* LaunchScreen.storyboard */; };
+		B444337D22239A5500622171 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444337C22239A5500622171 /* SearchViewController.swift */; };
+		B444337F2223A57500622171 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444337E2223A57500622171 /* SearchResultViewController.swift */; };
+		B44433812223B8FE00622171 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433802223B8FE00622171 /* SearchResultCell.swift */; };
+		B44433832223C8F300622171 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433822223C8F300622171 /* DetailViewController.swift */; };
+		B44433852223D4A500622171 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433842223D4A500622171 /* DetailCell.swift */; };
+		B44433872223D94600622171 /* DetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433862223D94600622171 /* DetailObject.swift */; };
+		B4DF2B0F2224CFFE0031C78D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF2B0E2224CFFE0031C78D /* Reachability.swift */; };
+		E9C3CE0BA842DB87F99968CB /* Pods_TATSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		60580E68F9C8CFE7763669C1 /* Pods-TATSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATSDKSample.debug.xcconfig"; path = "Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TATSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B44433672223988900622171 /* TATSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TATSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B444336A2223988900622171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B444336C2223988900622171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B444336F2223988900622171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B44433712223988B00622171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B44433742223988B00622171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B44433762223988B00622171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B444337C22239A5500622171 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = TATSDKSample/Search/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
+		B444337E2223A57500622171 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		B44433802223B8FE00622171 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		B44433822223C8F300622171 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B44433842223D4A500622171 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		B44433862223D94600622171 /* DetailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObject.swift; sourceTree = "<group>"; };
+		B4DF2B0E2224CFFE0031C78D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATSDKSample.release.xcconfig"; path = "Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B44433642223988900622171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C3CE0BA842DB87F99968CB /* Pods_TATSDKSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EF190AC55BC5FCDBAC01C31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FB286CE2029556279C080D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60580E68F9C8CFE7763669C1 /* Pods-TATSDKSample.debug.xcconfig */,
+				EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B444335E2223988900622171 = {
+			isa = PBXGroup;
+			children = (
+				B44433692223988900622171 /* TATSDKSample */,
+				B44433682223988900622171 /* Products */,
+				6FB286CE2029556279C080D3 /* Pods */,
+				0EF190AC55BC5FCDBAC01C31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B44433682223988900622171 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B44433672223988900622171 /* TATSDKSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B44433692223988900622171 /* TATSDKSample */ = {
+			isa = PBXGroup;
+			children = (
+				B444336A2223988900622171 /* AppDelegate.swift */,
+				B444336C2223988900622171 /* ViewController.swift */,
+				B4DF2B0D2224CFDF0031C78D /* Reachability */,
+				B4DF2B0C2224CE400031C78D /* Search */,
+				B444336E2223988900622171 /* Main.storyboard */,
+				B44433712223988B00622171 /* Assets.xcassets */,
+				B44433732223988B00622171 /* LaunchScreen.storyboard */,
+				B44433762223988B00622171 /* Info.plist */,
+			);
+			path = TATSDKSample;
+			sourceTree = "<group>";
+		};
+		B4DF2B0A2224CE0B0031C78D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B44433822223C8F300622171 /* DetailViewController.swift */,
+				B44433862223D94600622171 /* DetailObject.swift */,
+				B44433842223D4A500622171 /* DetailCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B4DF2B0B2224CE280031C78D /* SearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				B444337E2223A57500622171 /* SearchResultViewController.swift */,
+				B44433802223B8FE00622171 /* SearchResultCell.swift */,
+			);
+			path = SearchResult;
+			sourceTree = "<group>";
+		};
+		B4DF2B0C2224CE400031C78D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B444337C22239A5500622171 /* SearchViewController.swift */,
+				B4DF2B0B2224CE280031C78D /* SearchResult */,
+				B4DF2B0A2224CE0B0031C78D /* Detail */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B4DF2B0D2224CFDF0031C78D /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				B4DF2B0E2224CFFE0031C78D /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B44433662223988900622171 /* TATSDKSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B44433792223988B00622171 /* Build configuration list for PBXNativeTarget "TATSDKSample" */;
+			buildPhases = (
+				D55E65651C61D578EA8F27EF /* [CP] Check Pods Manifest.lock */,
+				B44433632223988900622171 /* Sources */,
+				B44433642223988900622171 /* Frameworks */,
+				B44433652223988900622171 /* Resources */,
+				C07D645A82E68114EAE76526 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TATSDKSample;
+			productName = TATSDKSample;
+			productReference = B44433672223988900622171 /* TATSDKSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B444335F2223988900622171 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Koson Tuangtee";
+				TargetAttributes = {
+					B44433662223988900622171 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = B44433622223988900622171 /* Build configuration list for PBXProject "TATSDKSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B444335E2223988900622171;
+			productRefGroup = B44433682223988900622171 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B44433662223988900622171 /* TATSDKSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B44433652223988900622171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B44433752223988B00622171 /* LaunchScreen.storyboard in Resources */,
+				B44433722223988B00622171 /* Assets.xcassets in Resources */,
+				B44433702223988900622171 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C07D645A82E68114EAE76526 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TATSDK/TATSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TATSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D55E65651C61D578EA8F27EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TATSDKSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B44433632223988900622171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B44433812223B8FE00622171 /* SearchResultCell.swift in Sources */,
+				B444337D22239A5500622171 /* SearchViewController.swift in Sources */,
+				B444336D2223988900622171 /* ViewController.swift in Sources */,
+				B44433832223C8F300622171 /* DetailViewController.swift in Sources */,
+				B444337F2223A57500622171 /* SearchResultViewController.swift in Sources */,
+				B4DF2B0F2224CFFE0031C78D /* Reachability.swift in Sources */,
+				B44433852223D4A500622171 /* DetailCell.swift in Sources */,
+				B444336B2223988900622171 /* AppDelegate.swift in Sources */,
+				B44433872223D94600622171 /* DetailObject.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B444336E2223988900622171 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B444336F2223988900622171 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B44433732223988B00622171 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B44433742223988B00622171 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B44433772223988B00622171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B44433782223988B00622171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B444337A2223988B00622171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60580E68F9C8CFE7763669C1 /* Pods-TATSDKSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P87AH66VDV;
+				INFOPLIST_FILE = TATSDKSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tat.sdksample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B444337B2223988B00622171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P87AH66VDV;
+				INFOPLIST_FILE = TATSDKSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.tat.sdksample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B44433622223988900622171 /* Build configuration list for PBXProject "TATSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B44433772223988B00622171 /* Debug */,
+				B44433782223988B00622171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B44433792223988B00622171 /* Build configuration list for PBXNativeTarget "TATSDKSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B444337A2223988B00622171 /* Debug */,
+				B444337B2223988B00622171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B444335F2223988900622171 /* Project object */;
+}

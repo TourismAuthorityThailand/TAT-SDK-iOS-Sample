@@ -153,28 +153,28 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
         }
         switch TypeCell.init(rawValue: indexPath.row)! {
         case .name:
-            cell?.setDetail(title: "Name", detail: detailList.name)
+            cell?.setDetail(title: "Name", detail: detailList.name, isHTMLDetail: false)
             return cell!
         case .address:
-            cell?.setDetail(title: "Address", detail: detailList.address)
+            cell?.setDetail(title: "Address", detail: detailList.address, isHTMLDetail: false)
             return cell!
         case .detail:
-            cell?.setDetail(title: "Detail", detail: detailList.detail)
+            cell?.setDetail(title: "Detail", detail: detailList.detail, isHTMLDetail: false)
             return cell!
         case .tel:
-            cell?.setDetail(title: "Tel", detail: detailList.tel)
+            cell?.setDetail(title: "Tel", detail: detailList.tel, isHTMLDetail: false)
             return cell!
         case .website:
-            cell?.setDetail(title: "Website", detail: detailList.website)
+            cell?.setDetail(title: "Website", detail: detailList.website, isHTMLDetail: false)
             return cell!
         case .facilities:
-            cell?.setDetail(title: "Facilities", detail: detailList.facilities)
+            cell?.setDetail(title: "Facilities", detail: detailList.facilities, isHTMLDetail: false)
             return cell!
         case .services:
-            cell?.setDetail(title: "Services", detail: detailList.services)
+            cell?.setDetail(title: "Services", detail: detailList.services, isHTMLDetail: false)
             return cell!
         case .paymentOptions:
-            cell?.setDetail(title: "Payment options", detail: detailList.paymentOptions)
+            cell?.setDetail(title: "Payment options", detail: detailList.paymentOptions, isHTMLDetail: false)
             return cell!
         }
         

@@ -114,7 +114,7 @@ class SearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SearchResultSegue" {
+        if segue.destination.isKind(of: SearchResultViewController.classForCoder()) {
             let resultViewController = segue.destination as? SearchResultViewController
             resultViewController!.listResult = listSearchResult
         }

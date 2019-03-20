@@ -7,6 +7,7 @@ Welcome to the TAT-SDK-iOS Sample application. This application demostrates how 
 You can get **API Key** from [TAT Developer Guide and Console](https://developers.tourismthailand.org/console) website.
 
 ## Download TAT-SDK-iOS
+[ ![Download](https://img.shields.io/cocoapods/v/TATSDK.svg) ](https://github.com/TATSDK/TAT-SDK-iOS-Sample)
 
 install CocoaPods:
 
@@ -30,9 +31,13 @@ Setup API Key for initial environment in application like this:
  
 ## Samples
 1. [Place Search](/TATSDKSample/Search/README.md)
-2. [Events and Festivals](#EventsAndFestival)
-3. [News](#News)
-4. [Recommended Route](#RecRoute)
+2. [Events and Festivals](/TATSDKSample/Event/README.md)
+3. [News](/TATSDKSample/News/README.md)
+4. [Recommended Routes](/TATSDKSample/RecommendedRoute/README.md)
+<!--5. [ChatBot](/app/src/main/java/org/tat/sdksample/ChatBot/README.md)-->
+
+<img src="SDK_Sample_Menu.png" width="30%" style="border: 1px solid lightgray;">
+
 
 ## Requirements
 
@@ -41,7 +46,7 @@ Setup API Key for initial environment in application like this:
 
 ## Authors
 
-* Powered by GLOBETECH Co., Ltd - [GlobeTech Co., Ltd. – CDG](https://www.cdg.co.th/website/about-cdg/affiliates-of-cdg/globetech-co-ltd/)
+* Power by GLOBETECH Co., Ltd - [GlobeTech Co., Ltd. – CDG](https://www.cdg.co.th/website/about-cdg/affiliates-of-cdg/globetech-co-ltd/)
 * Developed by GEOTALENT Co., Ltd - [GEOTALENT | GIS Developer](https://www.geotalent.co.th)
 
 ## License

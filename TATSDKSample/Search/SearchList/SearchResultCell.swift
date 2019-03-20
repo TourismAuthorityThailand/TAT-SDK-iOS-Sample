@@ -42,7 +42,8 @@ class SearchResultCell: UITableViewCell {
         var textDisplay = ""
         guard distance != 0.0 else { return "" }
         if(distance >= 1000) {
-            textDisplay = String(format: "%.1f km.", (distance/1000))
+            let temp = Double(String(format: "%.1f", (distance/1000)))
+            textDisplay = String(format: "%g km.", temp!)
         } else {
             textDisplay = String(format: "%.0f m.", distance)
         }

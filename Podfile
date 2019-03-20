@@ -6,6 +6,6 @@ target 'TATSDKSample' do
   use_frameworks!
 
   # Pods for TATSDKSample
-  pod 'TATSDK'
+  pod 'TATSDK', '1.0.0'
   pod 'SDWebImage', '~> 4.0'
 end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B431257F2230FCA500104EF7 /* RecommendedRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B431257E2230FCA500104EF7 /* RecommendedRoutesViewController.swift */; };
+		B43125812230FCC900104EF7 /* RecommendedRoutesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43125802230FCC900104EF7 /* RecommendedRoutesListViewController.swift */; };
+		B43125832230FCE000104EF7 /* RouteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43125822230FCE000104EF7 /* RouteDetailViewController.swift */; };
+		B4312588223112F300104EF7 /* RouteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4312587223112F300104EF7 /* RouteListCell.swift */; };
 		B444336B2223988900622171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444336A2223988900622171 /* AppDelegate.swift */; };
 		B444336D2223988900622171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B444336C2223988900622171 /* ViewController.swift */; };
 		B44433702223988900622171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B444336E2223988900622171 /* Main.storyboard */; };
@@ -18,13 +22,27 @@
 		B44433832223C8F300622171 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433822223C8F300622171 /* DetailViewController.swift */; };
 		B44433852223D4A500622171 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433842223D4A500622171 /* DetailCell.swift */; };
 		B44433872223D94600622171 /* DetailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44433862223D94600622171 /* DetailObject.swift */; };
+		B4DABDA72231F6AA00CC25A2 /* RouteDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DABDA62231F6AA00CC25A2 /* RouteDetailCell.swift */; };
+		B4DABDA92231F6BB00CC25A2 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DABDA82231F6BB00CC25A2 /* HeaderCell.swift */; };
+		B4DABDAC22324B7400CC25A2 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DABDAB22324B7400CC25A2 /* RouteMapViewController.swift */; };
 		B4DF2B0F2224CFFE0031C78D /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF2B0E2224CFFE0031C78D /* Reachability.swift */; };
+		B4F7D3B6222F712200CFAEDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3B5222F712200CFAEDA /* MainViewController.swift */; };
+		B4F7D3B8222F717700CFAEDA /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3B7222F717700CFAEDA /* EventsViewController.swift */; };
+		B4F7D3BA222F788300CFAEDA /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3B9222F788300CFAEDA /* EventCell.swift */; };
+		B4F7D3BC222F806D00CFAEDA /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3BB222F806D00CFAEDA /* EventDetailViewController.swift */; };
+		B4F7D3BF222FA63700CFAEDA /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3BE222FA63700CFAEDA /* NewsViewController.swift */; };
+		B4F7D3C1222FA8B900CFAEDA /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3C0222FA8B900CFAEDA /* NewsCell.swift */; };
+		B4F7D3C7222FAEB100CFAEDA /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3C6222FAEB100CFAEDA /* NewsDetailViewController.swift */; };
 		E9C3CE0BA842DB87F99968CB /* Pods_TATSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60580E68F9C8CFE7763669C1 /* Pods-TATSDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATSDKSample.debug.xcconfig"; path = "Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TATSDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B431257E2230FCA500104EF7 /* RecommendedRoutesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedRoutesViewController.swift; sourceTree = "<group>"; };
+		B43125802230FCC900104EF7 /* RecommendedRoutesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedRoutesListViewController.swift; sourceTree = "<group>"; };
+		B43125822230FCE000104EF7 /* RouteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailViewController.swift; sourceTree = "<group>"; };
+		B4312587223112F300104EF7 /* RouteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListCell.swift; sourceTree = "<group>"; };
 		B44433672223988900622171 /* TATSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TATSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B444336A2223988900622171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B444336C2223988900622171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +56,17 @@
 		B44433822223C8F300622171 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B44433842223D4A500622171 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		B44433862223D94600622171 /* DetailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObject.swift; sourceTree = "<group>"; };
+		B4DABDA62231F6AA00CC25A2 /* RouteDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailCell.swift; sourceTree = "<group>"; };
+		B4DABDA82231F6BB00CC25A2 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		B4DABDAB22324B7400CC25A2 /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		B4DF2B0E2224CFFE0031C78D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B4F7D3B5222F712200CFAEDA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B4F7D3B7222F717700CFAEDA /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		B4F7D3B9222F788300CFAEDA /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		B4F7D3BB222F806D00CFAEDA /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		B4F7D3BE222FA63700CFAEDA /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		B4F7D3C0222FA8B900CFAEDA /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		B4F7D3C6222FAEB100CFAEDA /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATSDKSample.release.xcconfig"; path = "Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +99,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B431257D2230FC6100104EF7 /* RecommendedRoute */ = {
+			isa = PBXGroup;
+			children = (
+				B431257E2230FCA500104EF7 /* RecommendedRoutesViewController.swift */,
+				B43125842230FCE800104EF7 /* RouteList */,
+				B43125852230FCFA00104EF7 /* RouteDetail */,
+				B4DABDAA22324B4A00CC25A2 /* RouteMap */,
+			);
+			path = RecommendedRoute;
+			sourceTree = "<group>";
+		};
+		B43125842230FCE800104EF7 /* RouteList */ = {
+			isa = PBXGroup;
+			children = (
+				B43125802230FCC900104EF7 /* RecommendedRoutesListViewController.swift */,
+				B4312587223112F300104EF7 /* RouteListCell.swift */,
+			);
+			path = RouteList;
+			sourceTree = "<group>";
+		};
+		B43125852230FCFA00104EF7 /* RouteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B43125822230FCE000104EF7 /* RouteDetailViewController.swift */,
+				B4DABDA62231F6AA00CC25A2 /* RouteDetailCell.swift */,
+				B4DABDA82231F6BB00CC25A2 /* HeaderCell.swift */,
+			);
+			path = RouteDetail;
+			sourceTree = "<group>";
+		};
 		B444335E2223988900622171 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +152,10 @@
 			children = (
 				B444336A2223988900622171 /* AppDelegate.swift */,
 				B444336C2223988900622171 /* ViewController.swift */,
+				B431257D2230FC6100104EF7 /* RecommendedRoute */,
+				B4F7D3BD222FA62700CFAEDA /* News */,
+				B4F7D3B4222F710300CFAEDA /* Event */,
+				B4F7D3B3222F70F500CFAEDA /* Main */,
 				B4DF2B0D2224CFDF0031C78D /* Reachability */,
 				B4DF2B0C2224CE400031C78D /* Search */,
 				B444336E2223988900622171 /* Main.storyboard */,
@@ -102,6 +164,14 @@
 				B44433762223988B00622171 /* Info.plist */,
 			);
 			path = TATSDKSample;
+			sourceTree = "<group>";
+		};
+		B4DABDAA22324B4A00CC25A2 /* RouteMap */ = {
+			isa = PBXGroup;
+			children = (
+				B4DABDAB22324B7400CC25A2 /* RouteMapViewController.swift */,
+			);
+			path = RouteMap;
 			sourceTree = "<group>";
 		};
 		B4DF2B0A2224CE0B0031C78D /* Detail */ = {
@@ -114,20 +184,20 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		B4DF2B0B2224CE280031C78D /* SearchResult */ = {
+		B4DF2B0B2224CE280031C78D /* SearchList */ = {
 			isa = PBXGroup;
 			children = (
 				B444337E2223A57500622171 /* SearchResultViewController.swift */,
 				B44433802223B8FE00622171 /* SearchResultCell.swift */,
 			);
-			path = SearchResult;
+			path = SearchList;
 			sourceTree = "<group>";
 		};
 		B4DF2B0C2224CE400031C78D /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				B444337C22239A5500622171 /* SearchViewController.swift */,
-				B4DF2B0B2224CE280031C78D /* SearchResult */,
+				B4DF2B0B2224CE280031C78D /* SearchList */,
 				B4DF2B0A2224CE0B0031C78D /* Detail */,
 			);
 			path = Search;
@@ -139,6 +209,66 @@
 				B4DF2B0E2224CFFE0031C78D /* Reachability.swift */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		B4F7D3B3222F70F500CFAEDA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3B5222F712200CFAEDA /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B4F7D3B4222F710300CFAEDA /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3C2222FAD2E00CFAEDA /* EventList */,
+				B4F7D3C3222FAD4F00CFAEDA /* EventDetail */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		B4F7D3BD222FA62700CFAEDA /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3C4222FAD8800CFAEDA /* NewsList */,
+				B4F7D3C5222FAE9700CFAEDA /* NewsDetail */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		B4F7D3C2222FAD2E00CFAEDA /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3B9222F788300CFAEDA /* EventCell.swift */,
+				B4F7D3B7222F717700CFAEDA /* EventsViewController.swift */,
+			);
+			path = EventList;
+			sourceTree = "<group>";
+		};
+		B4F7D3C3222FAD4F00CFAEDA /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3BB222F806D00CFAEDA /* EventDetailViewController.swift */,
+			);
+			path = EventDetail;
+			sourceTree = "<group>";
+		};
+		B4F7D3C4222FAD8800CFAEDA /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3BE222FA63700CFAEDA /* NewsViewController.swift */,
+				B4F7D3C0222FA8B900CFAEDA /* NewsCell.swift */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		B4F7D3C5222FAE9700CFAEDA /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B4F7D3C6222FAEB100CFAEDA /* NewsDetailViewController.swift */,
+			);
+			path = NewsDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,14 +394,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				B44433812223B8FE00622171 /* SearchResultCell.swift in Sources */,
+				B4312588223112F300104EF7 /* RouteListCell.swift in Sources */,
+				B4F7D3B8222F717700CFAEDA /* EventsViewController.swift in Sources */,
 				B444337D22239A5500622171 /* SearchViewController.swift in Sources */,
+				B4DABDAC22324B7400CC25A2 /* RouteMapViewController.swift in Sources */,
+				B4F7D3BC222F806D00CFAEDA /* EventDetailViewController.swift in Sources */,
+				B4F7D3C1222FA8B900CFAEDA /* NewsCell.swift in Sources */,
 				B444336D2223988900622171 /* ViewController.swift in Sources */,
+				B43125812230FCC900104EF7 /* RecommendedRoutesListViewController.swift in Sources */,
+				B4F7D3BA222F788300CFAEDA /* EventCell.swift in Sources */,
 				B44433832223C8F300622171 /* DetailViewController.swift in Sources */,
+				B4DABDA72231F6AA00CC25A2 /* RouteDetailCell.swift in Sources */,
+				B4F7D3C7222FAEB100CFAEDA /* NewsDetailViewController.swift in Sources */,
 				B444337F2223A57500622171 /* SearchResultViewController.swift in Sources */,
 				B4DF2B0F2224CFFE0031C78D /* Reachability.swift in Sources */,
 				B44433852223D4A500622171 /* DetailCell.swift in Sources */,
+				B431257F2230FCA500104EF7 /* RecommendedRoutesViewController.swift in Sources */,
 				B444336B2223988900622171 /* AppDelegate.swift in Sources */,
+				B4F7D3BF222FA63700CFAEDA /* NewsViewController.swift in Sources */,
 				B44433872223D94600622171 /* DetailObject.swift in Sources */,
+				B43125832230FCE000104EF7 /* RouteDetailViewController.swift in Sources */,
+				B4DABDA92231F6BB00CC25A2 /* HeaderCell.swift in Sources */,
+				B4F7D3B6222F712200CFAEDA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

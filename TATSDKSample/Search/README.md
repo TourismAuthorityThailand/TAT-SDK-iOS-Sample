@@ -2,13 +2,14 @@
 
 This sample demonstrates how to use `TATPlacesSearch` to search places from `TATPlacesSearchParameter` and get the detail of placce such as: Attraction, Accomodation, Restaurant, Shopping and Other type by search conditions
 
-## Search conditions
- * keyword
- * categories type
- * atitude,longitude
- * province name
- * radius (Maximum radius is 200 Kilometer. The unit is Kilometer)
- * number of result (Maximum result is 50 items)
+## Place Search parameters
+ * **keyword** *such as name, latitude and longitude of place or mapcode.*
+ * **categories** *use `TATCategory` supported `TATCategory.attraction`, `TATCategory.accommodation`, `TATCategory.restaurant`, `TATCategory.shop` and `TATCategory.other`*
+ * **latitude and longitude** value *when you want to search events around you.*
+ * **provinceName**
+ * **radius** *(Maximum radius is 200 Kilometer. The unit is Kilometer)*
+ * **numberOfResult** *(Maximum result is 50 items)*
+ * **language** *use `TATLanguage.english` for English display or `TATLanguage.thai` for Thai display.*
 
 ## How to use the sample
  1. Enter keyword to search.
@@ -19,10 +20,18 @@ This sample demonstrates how to use `TATPlacesSearch` to search places from `TAT
 
 
 ### Place Search
-![Place Search](PlaceSearch_ios.png)
+<img src="PlaceSearch_ios.png" width="30%" style="border: 1px solid lightgray;">
 
 ### Search Result
-![Search Result](SearchResult_ios.png)
+<img src="SearchResult_ios.png" width="30%" style="border: 1px solid lightgray;">
+
+## Place Detail parameters
+ * **placeID** *from place search result.*
+ * **language** *use `TATLanguage.english` for English display or `TATLanguage.thai` for Thai display.*
+
+## How to use the sample
+ 1. Choose one of place from result.
+ 2. Show the result of the selected place.
 
 ### Place Detail
-![Place Detail](PlaceDetail_ios.png)
+<img src="PlaceDetail_ios.png" width="30%" style="border: 1px solid lightgray;">

@@ -30,7 +30,7 @@ class SearchResultViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "DetailSegue" {
+        if segue.destination.isKind(of: DetailViewController.classForCoder()) {
             let detailViewController = segue.destination as? DetailViewController
             detailViewController?.id = idSelected
             detailViewController?.category = categorySelected

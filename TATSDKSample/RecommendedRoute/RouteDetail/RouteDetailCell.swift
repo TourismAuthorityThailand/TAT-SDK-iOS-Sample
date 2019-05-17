@@ -4,7 +4,6 @@
 
 
 import UIKit
-import SDWebImage
 import TATSDK
 
 class RouteDetailCell: UITableViewCell {
@@ -25,11 +24,11 @@ class RouteDetailCell: UITableViewCell {
     }
     
     func setDetailCell(info: TATStop) {
-        placeImage.sd_setImage(with: URL.init(string: info.thumbnail), placeholderImage: UIImage.init(named: "no_image"))
+        placeImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
         distanceLabel.text = convertDistance(distance: info.distance)
         nameLabel.text = info.name
-         transportTypeLabel.text = getTextProperty(key: info.travelMode).textDisplay.isEmpty ? "" : "By \(getTextProperty(key: info.travelMode).textDisplay)"
-        transportTypeLabel.textColor = getTextProperty(key: info.travelMode).color
+         transportTypeLabel.text = getTextProperty(key: info.travelBy).textDisplay.isEmpty ? "" : "By \(getTextProperty(key: info.travelBy).textDisplay)"
+        transportTypeLabel.textColor = getTextProperty(key: info.travelBy).color
     }
     
     func getTextProperty(key: String) -> (textDisplay: String,color: UIColor) {

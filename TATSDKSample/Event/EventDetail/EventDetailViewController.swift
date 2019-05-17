@@ -21,7 +21,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var id: String = ""
-    var detailList : TATGetEventDetailResult! = nil
+    var detailList : TATEventDetail! = nil
     
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class EventDetailViewController: UIViewController {
     
 
     private func getEventInfo(){
-        TATGetEventDetail.executeAsync(TATGetEventDetailParameter.init(eventId: id, language: TATLanguage.english)) { (result, error) in
+        TATEvents.getDetailAsync(id: id, language: .english) { (result, error) in
             DispatchQueue.main.async {
                 if let result = result {
                     self.detailList = result
@@ -72,19 +72,19 @@ extension EventDetailViewController : UITableViewDelegate, UITableViewDataSource
             cell?.setDetail(title: "Name", detail: detailList.name, isHTMLDetail: false)
             return cell!
         case .province:
-            cell?.setDetail(title: "Province", detail: !detailList.province.isEmpty ? detailList.province : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Province", detail: !detailList.location.isEmpty ? detailList.location : "-", isHTMLDetail: false)
             return cell!
         case .eventType:
-            cell?.setDetail(title: "Event Type", detail: detailList.info.eventType.count > 0 ? detailList.info.eventType.first! : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Event Type", detail: detailList.information.eventTypes.count > 0 ? detailList.information.eventTypes.first! : "-", isHTMLDetail: false)
             return cell!
         case .tel:
             cell?.setDetail(title: "Tel", detail: detailList.contact.phones.count > 0 ? detailList.contact.phones.first! : "-", isHTMLDetail: false)
             return cell!
         case .website:
-            cell?.setDetail(title: "Website", detail: detailList.contact.urls.count > 0 ? detailList.contact.urls.first! : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Website", detail: detailList.contact.urls?.count ?? 0 > 0 ? detailList.contact.urls?.first?.absoluteString ?? "" : "-", isHTMLDetail: false)
             return cell!
         case .detail:
-            cell?.setDetail(title: "Detail", detail: !detailList.info.htmlDetail.isEmpty ? detailList.info.htmlDetail : "-", isHTMLDetail: true)
+            cell?.setDetail(title: "Detail", detail: !detailList.information.htmlDetail.isEmpty ? detailList.information.htmlDetail : "-", isHTMLDetail: true)
             return cell!
     
         }

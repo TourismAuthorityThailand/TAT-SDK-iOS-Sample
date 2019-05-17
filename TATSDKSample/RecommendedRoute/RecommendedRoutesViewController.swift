@@ -68,7 +68,7 @@ class RecommendedRoutesViewController: UIViewController {
     var region : [EnumRegion] = [.all, .northern, .northEastern,.central, .western, .eastern ,.southern]
 
     var isUseLocation = true
-    var routesResult : [TATGetRoutesResult] = []
+    var routesResult : [TATRouteInfo] = []
     
     // number of day for route search
     var daySelected : Int = 0
@@ -101,11 +101,15 @@ class RecommendedRoutesViewController: UIViewController {
     func getRecommendRoutes() {
             /* sample parameter for recommended routes search */
         let dayParam = daySelected == 0 ? nil : daySelected
-
-        let param = isUseLocation ? TATGetRoutesParameter.init(numberOfDays: dayParam, latitude: lat, longitude: long, language: TATLanguage.english, region: regionSelected.convertToTATRegion()) : TATGetRoutesParameter.init(numberOfDays: dayParam, language: TATLanguage.english, region: regionSelected.convertToTATRegion())
-        TATGetRoutes.executeAsync(param) { (result, error) in
+        
+        var location: TATGeolocation? = nil
+        if isUseLocation {
+            location = TATGeolocation.init(latitude: lat, longitude: long)
+        }
+        
+        TATRecommendedRoutes.findAsync(numberOfDays: dayParam, geolocation: location, region: regionSelected.convertToTATRegion(), language: .english ) { (result, error) in
             DispatchQueue.main.async {
-                if let result = result!.results {
+                if let result = result {
                     self.routesResult = result
                 } else if let error = error {
                     print("error", error)

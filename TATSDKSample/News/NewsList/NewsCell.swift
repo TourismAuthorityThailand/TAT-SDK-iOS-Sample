@@ -3,7 +3,6 @@
 //  TATSDKSample
 
 import UIKit
-import SDWebImage
 import TATSDK
 
 class NewsCell: UITableViewCell {
@@ -24,11 +23,11 @@ class NewsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATGetNewsResult){
-        newsImage.sd_setImage(with: URL(string: info.thumbnail), placeholderImage: UIImage.init(named: "no_image"), completed: nil)
+    func setDetailCell(info: TATNewsInfo) {
+        newsImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
         titleLabel.text = info.name
-        introLabel.text = info.introduction
-        dateLabel.text = info.publishDate
+        introLabel.text = info.headline
+        dateLabel.text = info.displayPublishedDate
     }
 
 }

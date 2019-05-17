@@ -11,8 +11,8 @@ class EventsViewController: UIViewController {
     @IBOutlet weak var sortLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var sortBy : TATEventSortType = .date
-    var eventList : [TATGetEventsResult] = []
+    var sortBy : TATEventSortBy = .date
+    var eventList : [TATEventInfo] = []
     var idSelected: String = ""
     
     override func viewDidLoad() {
@@ -44,20 +44,19 @@ class EventsViewController: UIViewController {
         let long : Double  = 100.55785
         
         // Sort result support: 'distance' or 'date'
-        
-        TATGetEvents.executeAsync(TATGetEventsParameter.init(latitude: lat,
-                                                             longitude: long,
-                                                             sort: sortBy)) { (result, error) in
-                                                                DispatchQueue.main.async {
-                                                                    if let result = result {
-                                                                        self.eventList = (result.results)!
-                                                                    } else if let error = error {
-                                                                        print("error", error)
-                                                                        self.eventList = []
-                                                                    }
-                                                                    self.tableView.reloadData()
-                                                                    self.tableView.isHidden = self.eventList.count == 0
-                                                                }
+        TATEvents.findNearbyAsync(geolocation: TATGeolocation.init(latitude: lat, longitude: long),
+                                  sort: .date,
+                                  language: .english ) { (result, error) in
+                                    DispatchQueue.main.async {
+                                        if let result = result {
+                                            self.eventList = result
+                                        } else if let error = error {
+                                            print("error", error)
+                                            self.eventList = []
+                                        }
+                                        self.tableView.reloadData()
+                                        self.tableView.isHidden = self.eventList.count == 0
+                                    }
         }
     }
     
@@ -107,7 +106,7 @@ extension EventsViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = eventList[indexPath.row].eventId
+        idSelected = eventList[indexPath.row].id
         performSegue(withIdentifier: "EventDetailSegue", sender: self)
     }
 }

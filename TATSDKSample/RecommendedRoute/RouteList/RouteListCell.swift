@@ -5,7 +5,6 @@
 
 import UIKit
 import TATSDK
-import SDWebImage
 
 class RouteListCell: UITableViewCell {
     
@@ -26,10 +25,10 @@ class RouteListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATGetRoutesResult){
-        routeImage.sd_setImage(with: URL.init(string: info.thumbnail), placeholderImage: UIImage.init(named: "no_image"))
+    func setDetailCell(info: TATRouteInfo){
+        routeImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
         nameLabel.text = info.name
-        infoLabel.text = info.info
+        infoLabel.text = info.introduction
         dayLabel.text = "\(info.numberOfDays!) Day(s) "
         distanceLabel.text = convertDistance(distance: info.distance)
     }

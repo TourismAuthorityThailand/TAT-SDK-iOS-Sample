@@ -26,7 +26,7 @@ class RouteMapViewController: UIViewController {
         var locations : [CLLocationCoordinate2D] = []
         for info in stops {
             decodeCompressedPath(stop: info)
-            locations.append(CLLocationCoordinate2D.init(latitude: info.point.latitude!, longitude: info.point.longitude!))
+            locations.append(CLLocationCoordinate2D.init(latitude: info.geolocation.latitude!, longitude: info.geolocation.longitude!))
         }
         createMarker(locations: locations)
     }
@@ -42,7 +42,7 @@ class RouteMapViewController: UIViewController {
         
         // create route
         let routePolyLine = MKPolyline.init(coordinates: routeStopList, count: routeStopList.count)
-        let type = stop.travelMode
+        let type = stop.travelBy
         routePolyLine.subtitle = type
         mapView.addOverlay(routePolyLine)
     }
@@ -52,7 +52,7 @@ class RouteMapViewController: UIViewController {
         for (index,info) in stops.enumerated() {
             let objectAnnotation = MKPointAnnotation()
             objectAnnotation.subtitle = "\(index + 1). \(info.name!)"
-            objectAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: info.point.latitude!, longitude: info.point.longitude!)
+            objectAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: info.geolocation.latitude!, longitude: info.geolocation.longitude!)
             list.append(objectAnnotation)
         }
         mapView.addAnnotations(list)

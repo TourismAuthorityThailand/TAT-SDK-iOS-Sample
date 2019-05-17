@@ -10,7 +10,7 @@ class RecommendedRoutesListViewController: UIViewController {
 
     @IBOutlet weak var routesTableView: UITableView!
     
-    var routesResult : [TATGetRoutesResult] = []
+    var routesResult : [TATRouteInfo] = []
     var idSelected : String = ""
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ extension RecommendedRoutesListViewController : UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        idSelected = routesResult[indexPath.row].routeId
+        idSelected = routesResult[indexPath.row].id
         tableView.deselectRow(at: indexPath, animated: true)
         guard Reachability.isConnectedToNetwork() else { alert(title: "No internet connection!"); return }
         performSegue(withIdentifier: "RouteDetailSegue", sender: self)

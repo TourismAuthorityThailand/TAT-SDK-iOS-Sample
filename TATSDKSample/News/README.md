@@ -1,23 +1,27 @@
-# Get list of News and News Detail <a name="News"></a>
+# Feed news and Get News's detail <a name="News"></a>
 
-This sample demonstrates how to use `TATGetNews` to get the list of news with `TATGetNewsParameter` and how to get the detail of news from `TATGetNewsDetail` with `TATGetNewsDetailParameter` to show in `TATGetNewsDetailResult`.
+This sample demonstrates how to use `TATNews` to feed the news and how to get news' detail from TAT SDK.
 
-## Get list of News parameters
- * **language** *use `TATLanguage.english` for English display or `TATLanguage.thai` for Thai display.*
+# Feed News
+How to use `TATNews` to feed the news by `feed` method.
+## Parameters
+ * **language** use `TATLanguage` to set display language. *supported `.english` for display in English or `.thai` for display in Thai.*
 
 ## How to use the sample
  1. The results are sorted according by latest published date.
 
-### Get list of News
+### Feed News
 <img src="GetListOfNews_ios.png" width="30%" style="border: 1px solid lightgray;">
 
-## Get News Detail parameters
- * **newsId** *from list of news result.*
- * **language** *use `TATLanguage.english` for English display or `TATLanguage.thai` for Thai display.*
+# Get News's detail
+How to use `TATNews` to get the news's detail from feed news result by `getDetail` method with news id.
+## Parameters
+ * **id** The News ID from feed news result.
+ * **language** use `TATLanguage` to set display language. *supported `.english` for display in English or `.thai` for display in Thai.*
 
 ## How to use the sample
  1. Choose one of news from result.
  2. Show the result of the selected news.
 
-### News Detail
+### Get News's detail
 <img src="NewsDetail_ios.png" width="30%" style="border: 1px solid lightgray;">

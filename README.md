@@ -22,19 +22,18 @@ Setup API Key for initial environment in application like this:
 // Setup API Key in AppDelegate.swift
  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        TATSDKEnvironment.setAPIKey([API_KEY])
+        TATSDKEnvironment.setAPIKey("API_KEY")
         return true
     }
 ```
 
- * SDK Reference: [TAT-SDK-iOS Reference](https://gdev.geotalent.co.th/tatsdk/ios/)
+ * SDK Reference: [TAT-SDK-iOS Reference](https://tatapi.tourismthailand.org/tatsdk/References/ios/Index.html)
  
 ## Samples
 1. [Place Search](/TATSDKSample/Search/README.md)
 2. [Events and Festivals](/TATSDKSample/Event/README.md)
 3. [News](/TATSDKSample/News/README.md)
 4. [Recommended Routes](/TATSDKSample/RecommendedRoute/README.md)
-<!--5. [ChatBot](/app/src/main/java/org/tat/sdksample/ChatBot/README.md)-->
 
 <img src="SDK_Sample_Menu.png" width="30%" style="border: 1px solid lightgray;">
 
@@ -52,7 +51,3 @@ Setup API Key for initial environment in application like this:
 ## License
 
 * Copyright © <a href="https://www.tourismthailand.org/home" target="_blank">Tourism Authority of Thailand</a>.
-
-## Acknowledgments
-
-* SDWebImage - https://github.com/SDWebImage/SDWebImage

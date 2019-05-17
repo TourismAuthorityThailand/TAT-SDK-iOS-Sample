@@ -11,8 +11,8 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     
-    var listCategorySearch: [TATCategory] = []
-    var listSearchResult : [TATPlacesSearchResult] = []
+    var listCategorySearch: [TATCategoryCode] = []
+    var listSearchResult : [TATPlace] = []
     var isUseLocation = true
     
     override func viewDidLoad() {
@@ -69,41 +69,40 @@ class SearchViewController: UIViewController {
     }
     
     func search(){
-            /* sample parameter for search place */
-    // keyword for search place
+        /* sample parameter for search place */
+        // keyword for search place
         let keyword = self.searchTextField.text ?? ""
-    // Location is Tourism Authority of Thailand.
+        // Location is Tourism Authority of Thailand.
         let lat : Double = 13.74918
         let long : Double  = 100.55785
-    // Distance from latitude and longitude point.
+        // Distance from latitude and longitude point.
         let radius : Double  = 10
-    // Number of result.
+        // Number of result.
         let numberOfResult : Double  = 10
-       
-        let parameter = isUseLocation ? TATPlacesSearchParameter.init(keyword: keyword,
-                                                                      latitude: lat,
-                                                                      longitude: long,
-                                                                      categories: self.listCategorySearch,
-                                                                      radius: radius,
-                                                                      numberOfResult: numberOfResult,
-                                                                      language: TATLanguage.english) :
-                                        TATPlacesSearchParameter.init(keyword: keyword,
-                                                                      categories: self.listCategorySearch,
-                                                                      radius: radius,
-                                                                      numberOfResult: numberOfResult,
-                                                                      language: TATLanguage.english)
-
-         TATPlacesSearch.executeAsync(parameter) { (result, error) in
-                DispatchQueue.main.async {
-                    if let result = result {
-                        self.listSearchResult = (result.results)!
-                    }else if let error = error {
-                        print("error", error)
-                        self.listSearchResult = []
-                    }
-                    self.performSegue(withIdentifier: "SearchResultSegue", sender: self)
-                }
-            }
+        
+        var location: TATGeolocation? = nil
+        
+        if isUseLocation {
+            location = TATGeolocation.init(latitude: lat, longitude: long)
+        }
+        
+        TATPlaces.searchAsync(keyword: keyword,
+                              geolocation: location,
+                              categoryCodes: listCategorySearch,
+                              searchRadius: radius,
+                              numberOfResult: numberOfResult,
+                              language: .english ) { (result, error) in
+                                
+                                DispatchQueue.main.async {
+                                    if let result = result {
+                                        self.listSearchResult = result
+                                    }else if let error = error {
+                                        print("error", error)
+                                        self.listSearchResult = []
+                                    }
+                                    self.performSegue(withIdentifier: "SearchResultSegue", sender: self)
+                                }
+        }
     }
     
     func alert(title: String) {

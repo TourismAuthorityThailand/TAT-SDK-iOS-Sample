@@ -12,7 +12,7 @@ class RouteDetailViewController: UIViewController {
     @IBOutlet weak var routeDetailTableView: UITableView!
     
     var id : String = ""
-    var routeDetail : TATGetRouteDetailResult! = nil
+    var routeDetail : TATRouteDetail! = nil
     var stopsOnMap : [TATStop] = []
     
     override func viewDidLoad() {
@@ -31,12 +31,12 @@ class RouteDetailViewController: UIViewController {
 
     func getRouteDetail(){
         // route id is parameter for get route detail
-        TATGetRouteDetail.executeAsync(TATGetRouteDetailParameter.init(routeId: id, language: TATLanguage.english)) { (result, error) in
+        TATRecommendedRoutes.getDetailAsync(id: id, language: .english) { (result, error) in
             DispatchQueue.main.async {
                 if let result = result {
                     self.routeDetail = result
-                }else {
-                    print("error",error)
+                } else {
+                    print("error",error!)
                     self.routeDetailTableView.isHidden = true
                 }
                 self.routeDetailTableView.reloadData()

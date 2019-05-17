@@ -5,7 +5,6 @@
 
 import UIKit
 import TATSDK
-import SDWebImage
 
 class SearchResultCell: UITableViewCell {
 
@@ -26,17 +25,15 @@ class SearchResultCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func setDetail(info: TATPlacesSearchResult){
-        if let pic = info.thumbnail {
-            thumbmail.sd_setImage(with: URL(string: pic), placeholderImage: UIImage.init(named: "no_image"), completed: nil)
-        }
-        nameLabel.text = info.name
-        addressLabel.text = "\(setTextAddress(location: info.location))"
-        categoryLabel.text = "\(info.categoryName ?? "-")"
-        distanceLabel.text = "\(convertDistance(distance: info.distance))"
-        self.layoutIfNeeded()
-    }
+     
+     func setDetail(info: TATPlace){
+          thumbmail.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
+          nameLabel.text = info.name
+          addressLabel.text = "\(setTextAddress(location: info.location))"
+          categoryLabel.text = "\(info.category.description ?? "-")"
+          distanceLabel.text = "\(convertDistance(distance: info.distance))"
+          self.layoutIfNeeded()
+     }
     
     func convertDistance(distance: Double) -> String {
         var textDisplay = ""

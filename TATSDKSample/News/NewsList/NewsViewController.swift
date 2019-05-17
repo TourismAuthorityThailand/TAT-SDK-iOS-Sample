@@ -10,7 +10,7 @@ class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
     
-    var newsList : [TATGetNewsResult] = []
+    var newsList : [TATNewsInfo] = []
     var idSelected : String = ""
     
     override func viewDidLoad() {
@@ -28,10 +28,10 @@ class NewsViewController: UIViewController {
     }
     
     func getNews(){
-        TATGetNews.executeAsync(TATGetNewsParameter.init(language: TATLanguage.english)) { (result, error) in
+        TATNews.feedAsync(language: .english) { (result, error) in
             DispatchQueue.main.async {
                 if let result = result {
-                    self.newsList = (result.results)!
+                    self.newsList = (result)
                 }else if let error = error {
                     print("error", error)
                     self.newsList = []
@@ -64,7 +64,7 @@ extension NewsViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = newsList[indexPath.row].newsId
+        idSelected = newsList[indexPath.row].id
         performSegue(withIdentifier: "NewsDetailSegue", sender: self)
     }
 }

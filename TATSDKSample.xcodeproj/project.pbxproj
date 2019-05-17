@@ -33,6 +33,7 @@
 		B4F7D3BF222FA63700CFAEDA /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3BE222FA63700CFAEDA /* NewsViewController.swift */; };
 		B4F7D3C1222FA8B900CFAEDA /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3C0222FA8B900CFAEDA /* NewsCell.swift */; };
 		B4F7D3C7222FAEB100CFAEDA /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F7D3C6222FAEB100CFAEDA /* NewsDetailViewController.swift */; };
+		C3423826228D151100FDB33C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3423825228D151100FDB33C /* UIImageViewExtension.swift */; };
 		E9C3CE0BA842DB87F99968CB /* Pods_TATSDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6254AA835609D04CD64BBAF6 /* Pods_TATSDKSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +53,7 @@
 		B44433762223988B00622171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B444337C22239A5500622171 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = TATSDKSample/Search/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		B444337E2223A57500622171 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
-		B44433802223B8FE00622171 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		B44433802223B8FE00622171 /* SearchResultCell.swift */ = {isa = PBXFileReference; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		B44433822223C8F300622171 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B44433842223D4A500622171 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		B44433862223D94600622171 /* DetailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailObject.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		B4F7D3BE222FA63700CFAEDA /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B4F7D3C0222FA8B900CFAEDA /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		B4F7D3C6222FAEB100CFAEDA /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		C3423825228D151100FDB33C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATSDKSample.release.xcconfig"; path = "Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				B4F7D3B3222F70F500CFAEDA /* Main */,
 				B4DF2B0D2224CFDF0031C78D /* Reachability */,
 				B4DF2B0C2224CE400031C78D /* Search */,
+				C3423824228D14ED00FDB33C /* UIImageViewExtension */,
 				B444336E2223988900622171 /* Main.storyboard */,
 				B44433712223988B00622171 /* Assets.xcassets */,
 				B44433732223988B00622171 /* LaunchScreen.storyboard */,
@@ -271,6 +274,14 @@
 			path = NewsDetail;
 			sourceTree = "<group>";
 		};
+		C3423824228D14ED00FDB33C /* UIImageViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C3423825228D151100FDB33C /* UIImageViewExtension.swift */,
+			);
+			path = UIImageViewExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,14 +360,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TATSDKSample/Pods-TATSDKSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TATSDK/TATSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TATSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +416,7 @@
 				B4DABDA72231F6AA00CC25A2 /* RouteDetailCell.swift in Sources */,
 				B4F7D3C7222FAEB100CFAEDA /* NewsDetailViewController.swift in Sources */,
 				B444337F2223A57500622171 /* SearchResultViewController.swift in Sources */,
+				C3423826228D151100FDB33C /* UIImageViewExtension.swift in Sources */,
 				B4DF2B0F2224CFFE0031C78D /* Reachability.swift in Sources */,
 				B44433852223D4A500622171 /* DetailCell.swift in Sources */,
 				B431257F2230FCA500104EF7 /* RecommendedRoutesViewController.swift in Sources */,
@@ -562,8 +572,9 @@
 			baseConfigurationReference = 60580E68F9C8CFE7763669C1 /* Pods-TATSDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P87AH66VDV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TATSDKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,6 +582,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tat.sdksample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -581,8 +593,9 @@
 			baseConfigurationReference = EE0E015B01DC2BC6E48C5FF2 /* Pods-TATSDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P87AH66VDV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TATSDKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,6 +603,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.tat.sdksample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

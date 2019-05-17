@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     
     var id : String! = ""
-    var category : TATCategory! = .all
+    var category : TATCategoryCode! = .all
     var detailList : DetailObject! = nil
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         title = "Place Detail"
     }
     
-    func checkGetDetailForCategory(type: TATCategory){
+    func checkGetDetailForCategory(type: TATCategoryCode){
         guard Reachability.isConnectedToNetwork() else {
             alert(title: "Internet Connection not Available!")
             detailTableView.isHidden = true
@@ -63,8 +63,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-   private func getAttractionInfo(){
-        TATGetAttractionDetail.executeAsync(TATGetPlaceDetailParameter.init(placeId: id, language: TATLanguage.english)) { (result, error) in
+    private func getAttractionInfo(){
+        TATPlaces.getAttractionAsync(id: id, language: .english) { (result, error) in
             DispatchQueue.main.async {
                 if let result = result {
                     self.detailList = DetailObject.init(attraction: result)
@@ -77,22 +77,22 @@ class DetailViewController: UIViewController {
         }
     }
 
-   private func getAccommodationInfo(){
-        TATGetAccommodationDetail.executeAsync(TATGetPlaceDetailParameter.init(placeId: id, language: TATLanguage.english)) { (result, error) in
-              DispatchQueue.main.async {
-                 if let result = result {
-                self.detailList = DetailObject.init(accommodation: result)
-                self.detailTableView.reloadData()
-                 }else if let error = error {
+    private func getAccommodationInfo(){
+        TATPlaces.getAccommodationAsync(id: id, language: .english) { (result, error) in
+            DispatchQueue.main.async {
+                if let result = result {
+                    self.detailList = DetailObject.init(accommodation: result)
+                    self.detailTableView.reloadData()
+                }else if let error = error {
                     print("error", error)
                     self.detailTableView.isHidden = true
                 }
-             }
+            }
         }
     }
     
    private func getRestaurantInfo(){
-        TATGetRestaurantDetail.executeAsync(TATGetPlaceDetailParameter.init(placeId: id, language: TATLanguage.english)) { (result, error) in
+        TATPlaces.getRestaurantAsync(id: id, language: .english) { (result, error) in
              DispatchQueue.main.async {
                  if let result = result {
                 self.detailList = DetailObject.init(restaurant: result)
@@ -106,7 +106,7 @@ class DetailViewController: UIViewController {
     }
     
    private func getShopInfo(){
-        TATGetShopDetail.executeAsync(TATGetPlaceDetailParameter.init(placeId: id, language: TATLanguage.english)) { (result, error) in
+        TATPlaces.getShopAsync(id: id, language: .english) { (result, error) in
              DispatchQueue.main.async {
                  if let result = result {
                 self.detailList = DetailObject.init(shop: result)
@@ -120,7 +120,7 @@ class DetailViewController: UIViewController {
     }
     
    private func getOtherInfo(){
-        TATGetOtherPlaceDetail.executeAsync(TATGetPlaceDetailParameter.init(placeId: id, language: TATLanguage.english)) { (result, error) in
+        TATPlaces.getOtherPlaceAsync(id: id, language: .english) { (result, error) in
              DispatchQueue.main.async {
                  if let result = result {
                 self.detailList = DetailObject.init(other: result)

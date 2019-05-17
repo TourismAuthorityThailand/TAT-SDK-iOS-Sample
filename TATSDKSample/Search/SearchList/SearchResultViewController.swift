@@ -9,7 +9,7 @@ import TATSDK
 class SearchResultViewController: UIViewController {
 
     @IBOutlet weak var resultTable: UITableView!
-    var listResult : [TATPlacesSearchResult] = []
+    var listResult : [TATPlace] = []
     var idSelected: String = ""
     var categorySelected : TATCategory!
     
@@ -24,6 +24,7 @@ class SearchResultViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         // style navigation
         title = "Search Result"
     }
@@ -33,7 +34,7 @@ class SearchResultViewController: UIViewController {
         if segue.destination.isKind(of: DetailViewController.classForCoder()) {
             let detailViewController = segue.destination as? DetailViewController
             detailViewController?.id = idSelected
-            detailViewController?.category = categorySelected
+            detailViewController?.category = categorySelected.code
         }
     }
 }
@@ -51,8 +52,8 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = listResult[indexPath.row].placeId
-        categorySelected = listResult[indexPath.row].categoryId
+        idSelected = listResult[indexPath.row].id
+        categorySelected = listResult[indexPath.row].category
         performSegue(withIdentifier: "DetailSegue", sender: self)
     }
 }

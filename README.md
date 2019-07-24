@@ -27,7 +27,7 @@ Setup API Key for initial environment in application like this:
     }
 ```
 
- * SDK Reference: [TAT-SDK-iOS Reference](https://tatapi.tourismthailand.org/tatsdk/References/ios/Index.html)
+ * SDK Reference: [TAT-SDK-iOS Reference](https://tatapi.tourismthailand.org/tatsdk/References/ios/latest/)
  
 ## Samples
 1. [Place Search](/TATSDKSample/Search/README.md)
@@ -40,7 +40,7 @@ Setup API Key for initial environment in application like this:
 
 ## Requirements
 
- * iOS 8.0 or later
+ * iOS 10.0 or later
  * Xcode 10.0 or later
 
 ## Authors

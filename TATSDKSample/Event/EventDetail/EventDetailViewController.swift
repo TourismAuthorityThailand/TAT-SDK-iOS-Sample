@@ -21,7 +21,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var id: String = ""
-    var detailList : TATEventDetail! = nil
+    var detailList : TATEventDetail? = nil
     
     
     override func viewDidLoad() {
@@ -63,29 +63,38 @@ extension EventDetailViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as? DetailCell
-        guard detailList != nil else {
-            return UITableViewCell.init()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell") as? DetailCell,
+            detailList != nil
+            else { return UITableViewCell.init() }
         switch EventTypeCell.init(rawValue: indexPath.row)! {
         case .name:
-            cell?.setDetail(title: "Name", detail: detailList.name, isHTMLDetail: false)
-            return cell!
+            cell.setDetail(title: "Name", detail: detailList?.name, isHTMLDetail: false)
+            return cell
         case .province:
-            cell?.setDetail(title: "Province", detail: !detailList.location.isEmpty ? detailList.location : "-", isHTMLDetail: false)
-            return cell!
+            var text = "-"
+            if let content = detailList?.location { text = content }
+            cell.setDetail(title: "Province", detail: text, isHTMLDetail: false)
+            return cell
         case .eventType:
-            cell?.setDetail(title: "Event Type", detail: detailList.information.eventTypes.count > 0 ? detailList.information.eventTypes.first! : "-", isHTMLDetail: false)
-            return cell!
+            var text = "-"
+            if let content = detailList?.information?.eventTypes?.first { text = content }
+            cell.setDetail(title: "Event Type", detail: text, isHTMLDetail: false)
+            return cell
         case .tel:
-            cell?.setDetail(title: "Tel", detail: detailList.contact.phones.count > 0 ? detailList.contact.phones.first! : "-", isHTMLDetail: false)
-            return cell!
+            var text = "-"
+            if let content = detailList?.contact?.phones?.first { text = content }
+            cell.setDetail(title: "Tel", detail: text, isHTMLDetail: false)
+            return cell
         case .website:
-            cell?.setDetail(title: "Website", detail: detailList.contact.urls?.count ?? 0 > 0 ? detailList.contact.urls?.first?.absoluteString ?? "" : "-", isHTMLDetail: false)
-            return cell!
+            var text = "-"
+            if let content = detailList?.contact?.urls?.first?.absoluteString { text = content }
+            cell.setDetail(title: "Website", detail: text, isHTMLDetail: false)
+            return cell
         case .detail:
-            cell?.setDetail(title: "Detail", detail: !detailList.information.htmlDetail.isEmpty ? detailList.information.htmlDetail : "-", isHTMLDetail: true)
-            return cell!
+            var text = "-"
+            if let content = detailList?.information?.htmlDetail { text = content }
+            cell.setDetail(title: "Detail", detail: text, isHTMLDetail: true)
+            return cell
     
         }
         

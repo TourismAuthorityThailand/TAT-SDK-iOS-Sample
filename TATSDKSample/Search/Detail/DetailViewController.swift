@@ -22,13 +22,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     
     var id : String! = ""
-    var category : TATCategoryCode! = .all
-    var detailList : DetailObject! = nil
+    var category : TATCategoryCode? = nil
+    var detailList : DetailObject? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         detailTableView.tableFooterView = UIView.init()
-        checkGetDetailForCategory(type: category)
+        checkGetDetailForCategory(type: category ?? .all)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -153,28 +153,28 @@ extension DetailViewController : UITableViewDelegate, UITableViewDataSource {
         }
         switch TypeCell.init(rawValue: indexPath.row)! {
         case .name:
-            cell?.setDetail(title: "Name", detail: detailList.name, isHTMLDetail: false)
+            cell?.setDetail(title: "Name", detail: detailList?.name, isHTMLDetail: false)
             return cell!
         case .address:
-            cell?.setDetail(title: "Address", detail: detailList.address, isHTMLDetail: false)
+            cell?.setDetail(title: "Address", detail: detailList?.address, isHTMLDetail: false)
             return cell!
         case .detail:
-            cell?.setDetail(title: "Detail", detail: detailList.detail, isHTMLDetail: false)
+            cell?.setDetail(title: "Detail", detail: detailList?.detail, isHTMLDetail: false)
             return cell!
         case .tel:
-            cell?.setDetail(title: "Tel", detail: detailList.tel, isHTMLDetail: false)
+            cell?.setDetail(title: "Tel", detail: detailList?.tel, isHTMLDetail: false)
             return cell!
         case .website:
-            cell?.setDetail(title: "Website", detail: detailList.website, isHTMLDetail: false)
+            cell?.setDetail(title: "Website", detail: detailList?.website, isHTMLDetail: false)
             return cell!
         case .facilities:
-            cell?.setDetail(title: "Facilities", detail: detailList.facilities, isHTMLDetail: false)
+            cell?.setDetail(title: "Facilities", detail: detailList?.facilities, isHTMLDetail: false)
             return cell!
         case .services:
-            cell?.setDetail(title: "Services", detail: detailList.services, isHTMLDetail: false)
+            cell?.setDetail(title: "Services", detail: detailList?.services, isHTMLDetail: false)
             return cell!
         case .paymentOptions:
-            cell?.setDetail(title: "Payment options", detail: detailList.paymentOptions, isHTMLDetail: false)
+            cell?.setDetail(title: "Payment options", detail: detailList?.paymentOptions, isHTMLDetail: false)
             return cell!
         }
         

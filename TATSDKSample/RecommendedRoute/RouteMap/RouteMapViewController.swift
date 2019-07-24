@@ -26,7 +26,9 @@ class RouteMapViewController: UIViewController {
         var locations : [CLLocationCoordinate2D] = []
         for info in stops {
             decodeCompressedPath(stop: info)
-            locations.append(CLLocationCoordinate2D.init(latitude: info.geolocation.latitude!, longitude: info.geolocation.longitude!))
+            guard let geolocation = info.geolocation else { continue }
+            locations.append(CLLocationCoordinate2D.init(latitude: geolocation.latitude,
+                                                         longitude: geolocation.longitude))
         }
         createMarker(locations: locations)
     }
@@ -37,7 +39,8 @@ class RouteMapViewController: UIViewController {
         let decodeRoutes = TATPathCompressor().decode(compressedValue: stop.compressedPath)
         guard let routes = decodeRoutes else { return }
         for route in routes {
-            routeStopList.append(CLLocationCoordinate2D.init(latitude: route.latitude!, longitude: route.longitude!))
+            routeStopList.append(CLLocationCoordinate2D.init(latitude: route.latitude,
+                                                             longitude: route.longitude))
         }
         
         // create route
@@ -51,8 +54,10 @@ class RouteMapViewController: UIViewController {
         var list : [MKAnnotation] = []
         for (index,info) in stops.enumerated() {
             let objectAnnotation = MKPointAnnotation()
-            objectAnnotation.subtitle = "\(index + 1). \(info.name!)"
-            objectAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: info.geolocation.latitude!, longitude: info.geolocation.longitude!)
+            objectAnnotation.subtitle = "\(index + 1). \(info.name)"
+            guard let geolocation = info.geolocation else { continue }
+            objectAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: geolocation.latitude,
+                                                                      longitude: geolocation.longitude)
             list.append(objectAnnotation)
         }
         mapView.addAnnotations(list)

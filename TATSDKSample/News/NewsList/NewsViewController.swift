@@ -10,7 +10,7 @@ class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView!
     
-    var newsList : [TATNewsInfo] = []
+    var newsList : [TATNewsInfo]? = []
     var idSelected : String = ""
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class NewsViewController: UIViewController {
                     self.newsList = []
                 }
                 self.newsTableView.reloadData()
-                self.newsTableView.isHidden = self.newsList.count == 0
+                self.newsTableView.isHidden = (self.newsList == nil || self.newsList?.count == 0)
             }
         }
     }
@@ -53,18 +53,18 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsList.count
+        return newsList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as! NewsCell
-        cell.setDetailCell(info: newsList[indexPath.row])
+        cell.setDetailCell(info: newsList?[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = newsList[indexPath.row].id
+        idSelected = newsList?[indexPath.row].id ?? ""
         performSegue(withIdentifier: "NewsDetailSegue", sender: self)
     }
 }

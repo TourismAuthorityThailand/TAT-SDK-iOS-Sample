@@ -23,14 +23,14 @@ class DetailCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setDetail(title: String, detail: String, isHTMLDetail : Bool) {
+    func setDetail(title: String?, detail: String?, isHTMLDetail : Bool) {
         titleLabel.text = title
 //
         guard isHTMLDetail else {
             detailLabel.text = detail
             return
         }
-        guard let data = detail.data(using: String.Encoding.unicode) else { return }
+        guard let data = detail?.data(using: String.Encoding.unicode) else { return }
         
         try? detailLabel.attributedText =
             NSAttributedString(data: data,

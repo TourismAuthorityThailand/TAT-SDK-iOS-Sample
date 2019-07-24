@@ -10,14 +10,14 @@ class RecommendedRoutesListViewController: UIViewController {
 
     @IBOutlet weak var routesTableView: UITableView!
     
-    var routesResult : [TATRouteInfo] = []
+    var routesResult : [TATRouteInfo]? = []
     var idSelected : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         routesTableView.tableFooterView = UIView.init()
         guard Reachability.isConnectedToNetwork() else { routesTableView.isHidden = true; return }
-        guard routesResult.count > 0 else { routesTableView.isHidden = true; return }
+        guard let routesResult = routesResult, routesResult.count > 0 else { routesTableView.isHidden = true; return }
         routesTableView.reloadData()
     }
     
@@ -38,17 +38,17 @@ class RecommendedRoutesListViewController: UIViewController {
 
 extension RecommendedRoutesListViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routesResult.count
+        return routesResult?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RouteListCell") as? RouteListCell
-        cell?.setDetailCell(info: routesResult[indexPath.row])
+        cell?.setDetailCell(info: routesResult?[indexPath.row])
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        idSelected = routesResult[indexPath.row].id
+        idSelected = routesResult?[indexPath.row].id ?? ""
         tableView.deselectRow(at: indexPath, animated: true)
         guard Reachability.isConnectedToNetwork() else { alert(title: "No internet connection!"); return }
         performSegue(withIdentifier: "RouteDetailSegue", sender: self)

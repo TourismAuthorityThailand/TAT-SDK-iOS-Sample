@@ -12,7 +12,7 @@ class EventsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var sortBy : TATEventSortBy = .date
-    var eventList : [TATEventInfo] = []
+    var eventList : [TATEventInfo]? = []
     var idSelected: String = ""
     
     override func viewDidLoad() {
@@ -55,7 +55,7 @@ class EventsViewController: UIViewController {
                                             self.eventList = []
                                         }
                                         self.tableView.reloadData()
-                                        self.tableView.isHidden = self.eventList.count == 0
+                                        self.tableView.isHidden = (self.eventList == nil || self.eventList?.count == 0)
                                     }
         }
     }
@@ -95,18 +95,18 @@ class EventsViewController: UIViewController {
 
 extension EventsViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventList.count
+        return eventList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell") as! EventCell
-        cell.setDetailCell(info: eventList[indexPath.row])
+        cell.setDetailCell(info: eventList?[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = eventList[indexPath.row].id
+        idSelected = eventList?[indexPath.row].id ?? ""
         performSegue(withIdentifier: "EventDetailSegue", sender: self)
     }
 }

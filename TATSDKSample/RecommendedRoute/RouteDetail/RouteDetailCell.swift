@@ -23,15 +23,15 @@ class RouteDetailCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATStop) {
-        placeImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
-        distanceLabel.text = convertDistance(distance: info.distance)
-        nameLabel.text = info.name
-         transportTypeLabel.text = getTextProperty(key: info.travelBy).textDisplay.isEmpty ? "" : "By \(getTextProperty(key: info.travelBy).textDisplay)"
-        transportTypeLabel.textColor = getTextProperty(key: info.travelBy).color
+    func setDetailCell(info: TATStop?) {
+        placeImage.downloaded(from: info?.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
+        distanceLabel.text = convertDistance(distance: info?.distance)
+        nameLabel.text = info?.name
+        transportTypeLabel.text = getTextProperty(key: info?.travelBy).textDisplay.isEmpty ? "" : "By \(getTextProperty(key: info?.travelBy).textDisplay)"
+        transportTypeLabel.textColor = getTextProperty(key: info?.travelBy).color
     }
     
-    func getTextProperty(key: String) -> (textDisplay: String,color: UIColor) {
+    private func getTextProperty(key: String?) -> (textDisplay: String,color: UIColor) {
         switch key {
         case "C":
             return (textDisplay: "Car",color: UIColor.red)
@@ -45,9 +45,9 @@ class RouteDetailCell: UITableViewCell {
     }
 
     
-    func convertDistance(distance: Double) -> String {
+    private func convertDistance(distance: Double?) -> String {
         var textDisplay = ""
-        guard distance != 0.0 else { return "" }
+        guard let distance = distance, distance >= 0.0 else { return textDisplay }
         if(distance >= 1000) {
             let temp = Double(String(format: "%.1f", (distance/1000)))
             textDisplay = String(format: "%g km.", temp!)

@@ -21,7 +21,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var newsDetailTableView: UITableView!
     
     var id : String! = nil
-    var detailList : TATNewsDetail! = nil
+    var detailList : TATNewsDetail? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,19 +66,19 @@ extension NewsDetailViewController : UITableViewDelegate, UITableViewDataSource 
         }
         switch NewsTypeCell.init(rawValue: indexPath.row)! {
         case .name:
-            cell?.setDetail(title: "Name", detail: detailList.name, isHTMLDetail: false)
+            cell?.setDetail(title: "Name", detail: detailList?.name, isHTMLDetail: false)
             return cell!
         case .date:
-            cell?.setDetail(title: "Publish date", detail: !detailList.displayPublishedDate.isEmpty ? detailList.displayPublishedDate : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Publish date", detail: !((detailList?.displayPublishedDate.isEmpty) ?? false) ? detailList?.displayPublishedDate : "-", isHTMLDetail: false)
             return cell!
         case .location:
-            cell?.setDetail(title: "Location", detail: !detailList.location.isEmpty ? detailList.location : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Location", detail: !(detailList?.location.isEmpty ?? false) ? detailList?.location : "-", isHTMLDetail: false)
             return cell!
         case .website:
-            cell?.setDetail(title: "Website", detail: detailList.urls?.count ?? 0 > 0 ? detailList.urls?.first?.absoluteString ?? "" : "-", isHTMLDetail: false)
+            cell?.setDetail(title: "Website", detail: detailList?.urls?.count ?? 0 > 0 ? detailList?.urls?.first?.absoluteString ?? "" : "-", isHTMLDetail: false)
             return cell!
         case .detail:
-            cell?.setDetail(title: "Detail", detail: !detailList.htmlDetail.isEmpty ? detailList.htmlDetail : "-", isHTMLDetail: true)
+            cell?.setDetail(title: "Detail", detail: !(detailList?.htmlDetail.isEmpty ?? false) ? detailList?.htmlDetail : "-", isHTMLDetail: true)
             return cell!
        
         }

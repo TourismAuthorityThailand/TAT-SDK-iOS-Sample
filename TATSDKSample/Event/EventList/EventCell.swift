@@ -25,11 +25,11 @@ class EventCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATEventInfo){
-        eventImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
-        titleLabel.text = info.name
-        distanceLabel.text = convertDistance(distance: info.distance)
-        dateLabel.text = info.displayPeriodDate
+    func setDetailCell(info: TATEventInfo?){
+        eventImage.downloaded(from: info?.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
+        titleLabel.text = info?.name
+        distanceLabel.text = convertDistance(distance: info?.distance ?? 0)
+        dateLabel.text = info?.displayPeriodDate
     }
 
     func convertDistance(distance: Double) -> String {

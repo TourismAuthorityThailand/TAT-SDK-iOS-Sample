@@ -2,9 +2,6 @@
 //  UIImageViewExtension.swift
 //  TATSDKSample
 //
-//  Created by Rattanatut Pluwungkan on 16/5/2562 BE.
-//  Copyright © 2562 Koson Tuangtee. All rights reserved.
-//
 
 import UIKit
 

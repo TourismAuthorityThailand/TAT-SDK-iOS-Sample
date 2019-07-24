@@ -12,7 +12,7 @@ class RouteDetailViewController: UIViewController {
     @IBOutlet weak var routeDetailTableView: UITableView!
     
     var id : String = ""
-    var routeDetail : TATRouteDetail! = nil
+    var routeDetail : TATRouteDetail? = nil
     var stopsOnMap : [TATStop] = []
     
     override func viewDidLoad() {
@@ -45,14 +45,15 @@ class RouteDetailViewController: UIViewController {
     }
     
     @IBAction func viewOnMapAction(_ sender: UIButton) {
-        stopsOnMap = routeDetail.days[sender.tag].stops!
+        guard let stops = routeDetail?.days?[sender.tag].stops else { return }
+        stopsOnMap = stops
         performSegue(withIdentifier: "RouteMapSegue", sender: self)
     }
 }
 
 extension RouteDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return routeDetail == nil ? 0 : routeDetail.days.count
+        return routeDetail?.days?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -61,19 +62,19 @@ extension RouteDetailViewController: UITableViewDataSource, UITableViewDelegate 
 
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cellHeader = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as? HeaderCell
-        cellHeader?.setDetailCell(day: section + 1, index: section)
-        return cellHeader!
+        guard let cellHeader = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as? HeaderCell else {  return UITableViewCell() }
+        cellHeader.setDetailCell(day: section + 1, index: section)
+        return cellHeader
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return routeDetail.days[section].stops.count
+        return routeDetail?.days?[section].stops?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteDetailCell") as? RouteDetailCell
-        cell?.setDetailCell(info: routeDetail.days[indexPath.section].stops[indexPath.row])
-        return cell!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RouteDetailCell") as? RouteDetailCell else { return UITableViewCell() }
+        cell.setDetailCell(info: routeDetail?.days?[indexPath.section].stops?[indexPath.row])
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

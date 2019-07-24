@@ -23,11 +23,11 @@ class NewsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATNewsInfo) {
-        newsImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
-        titleLabel.text = info.name
-        introLabel.text = info.headline
-        dateLabel.text = info.displayPublishedDate
+    func setDetailCell(info: TATNewsInfo?) {
+        newsImage.downloaded(from: info?.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
+        titleLabel.text = info?.name
+        introLabel.text = info?.headline
+        dateLabel.text = info?.displayPublishedDate
     }
 
 }

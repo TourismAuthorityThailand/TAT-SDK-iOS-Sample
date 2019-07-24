@@ -9,14 +9,14 @@ import TATSDK
 class SearchResultViewController: UIViewController {
 
     @IBOutlet weak var resultTable: UITableView!
-    var listResult : [TATPlace] = []
+    var listResult : [TATPlace]? = []
     var idSelected: String = ""
-    var categorySelected : TATCategory!
+    var categorySelected : TATCategory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTable.tableFooterView = UIView.init()
-        guard listResult.count != 0 else {
+        guard let listResult = listResult, listResult.count > 0 else {
             resultTable.isHidden = true
             return
         }
@@ -34,26 +34,26 @@ class SearchResultViewController: UIViewController {
         if segue.destination.isKind(of: DetailViewController.classForCoder()) {
             let detailViewController = segue.destination as? DetailViewController
             detailViewController?.id = idSelected
-            detailViewController?.category = categorySelected.code
+            detailViewController?.category = categorySelected?.code
         }
     }
 }
 
 extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return listResult.count
+        return listResult?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell") as? SearchResultCell
-        cell?.setDetail(info: listResult[indexPath.row])
+        cell?.setDetail(info: listResult?[indexPath.row])
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        idSelected = listResult[indexPath.row].id
-        categorySelected = listResult[indexPath.row].category
+        idSelected = listResult?[indexPath.row].id ?? ""
+        categorySelected = listResult?[indexPath.row].category
         performSegue(withIdentifier: "DetailSegue", sender: self)
     }
 }

@@ -25,12 +25,12 @@ class RouteListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetailCell(info: TATRouteInfo){
-        routeImage.downloaded(from: info.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
-        nameLabel.text = info.name
-        infoLabel.text = info.introduction
-        dayLabel.text = "\(info.numberOfDays!) Day(s) "
-        distanceLabel.text = convertDistance(distance: info.distance)
+    func setDetailCell(info: TATRouteInfo?){
+        routeImage.downloaded(from: info?.thumbnailUrl, placeholderImage: UIImage.init(named: "no_image"))
+        nameLabel.text = info?.name
+        infoLabel.text = info?.introduction
+        dayLabel.text = "\(String(describing: info?.numberOfDays!)) Day(s) "
+        distanceLabel.text = convertDistance(distance: info?.distance ?? 0)
     }
     
     func convertDistance(distance: Double) -> String {

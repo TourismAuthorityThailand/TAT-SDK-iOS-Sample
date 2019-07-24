@@ -12,7 +12,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     var listCategorySearch: [TATCategoryCode] = []
-    var listSearchResult : [TATPlace] = []
+    var listSearchResult : [TATPlace]? = []
     var isUseLocation = true
     
     override func viewDidLoad() {
@@ -96,7 +96,7 @@ class SearchViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     if let result = result {
                                         self.listSearchResult = result
-                                    }else if let error = error {
+                                    } else if let error = error {
                                         print("error", error)
                                         self.listSearchResult = []
                                     }
@@ -115,7 +115,7 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination.isKind(of: SearchResultViewController.classForCoder()) {
             let resultViewController = segue.destination as? SearchResultViewController
-            resultViewController!.listResult = listSearchResult
+            resultViewController?.listResult = listSearchResult
         }
     }
     

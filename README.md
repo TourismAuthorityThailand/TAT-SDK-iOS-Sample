@@ -35,7 +35,7 @@ Setup API Key for initial environment in application like this:
 3. [News](/TATSDKSample/News/README.md)
 4. [Recommended Routes](/TATSDKSample/RecommendedRoute/README.md)
 
-<img src="SDK_Sample_Menu.png" width="30%" style="border: 1px solid lightgray;">
+![](SDK_Sample_Menu.png) 
 
 
 ## Requirements
@@ -45,9 +45,9 @@ Setup API Key for initial environment in application like this:
 
 ## Authors
 
-* Power by GLOBETECH Co., Ltd - [GlobeTech Co., Ltd. – CDG](https://www.cdg.co.th/website/about-cdg/affiliates-of-cdg/globetech-co-ltd/)
+* Power by GLOBETECH Co., Ltd - [GlobeTech Co., Ltd. - CDG](https://www.cdg.co.th/website/about-cdg/affiliates-of-cdg/globetech-co-ltd/)
 * Developed by GEOTALENT Co., Ltd - [GEOTALENT | GIS Developer](https://www.geotalent.co.th)
 
 ## License
 
-* Copyright © <a href="https://www.tourismthailand.org/home" target="_blank">Tourism Authority of Thailand</a>.
+* Copyright © [Tourism Authority of Thailand](https://www.tourismthailand.org/home).

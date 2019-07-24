@@ -1,4 +1,4 @@
-# Feed news and Get News's detail <a name="News"></a>
+# Feed news and Get News's detail
 
 This sample demonstrates how to use `TATNews` to feed the news and how to get news' detail from TAT SDK.
 
@@ -11,7 +11,7 @@ How to use `TATNews` to feed the news by `feed` method.
  1. The results are sorted according by latest published date.
 
 ### Feed News
-<img src="GetListOfNews_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](GetListOfNews_ios.png)
 
 # Get News's detail
 How to use `TATNews` to get the news's detail from feed news result by `getDetail` method with news id.
@@ -24,4 +24,4 @@ How to use `TATNews` to get the news's detail from feed news result by `getDetai
  2. Show the result of the selected news.
 
 ### Get News's detail
-<img src="NewsDetail_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](NewsDetail_ios.png)

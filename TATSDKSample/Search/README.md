@@ -1,4 +1,4 @@
-# Place Search and Get Place's detail <a name="PlaceSearch"></a>
+# Place Search and Get Place's detail
 
 This sample demonstrates how to search and get the place detail from TAT SDK.
 
@@ -22,10 +22,10 @@ How to use `TATPlaces` to search places by `search` method.
 
 
 ### Place Search
-<img src="PlaceSearch_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](PlaceSearch_ios.png)
 
 ### Place Search Result
-<img src="SearchResult_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](SearchResult_ios.png)
 
 # Get Place's detail
 How to use `TATPlaces` to get place's detail and use the category of place to choose the get detail method, such as: `getAttraction`, `getAccommodation`, `getRestaurant`, `getShop` and `getOtherPlace` method with place id from search result.
@@ -39,4 +39,4 @@ How to use `TATPlaces` to get place's detail and use the category of place to ch
  2. Show the result of the selected place.
 
 ### Get Place's detail
-<img src="PlaceDetail_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](PlaceDetail_ios.png)

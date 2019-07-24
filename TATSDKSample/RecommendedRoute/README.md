@@ -1,4 +1,4 @@
-# Find Recommended Routes and Get Route's detail <a name="RecommendedRoute"></a>
+# Find Recommended Routes and Get Route's detail
 
 This sample demonstrates how to use `TATRecommendedRoutes` to find the recommended routes and get the route's detail from TAT SDK.
 
@@ -18,10 +18,10 @@ How to use `TATRecommendedRoutes` to find the recommended routes by `find` metho
  5. When you clicked a result that show the detail of route.
 
 ### Find Recommended Routes
-<img src="RecommendedRouteSearch.png" width="30%" style="border: 1px solid lightgray;">
+![](RecommendedRouteSearch.png)
 
 ### Find Recommended Routes Result
-<img src="RecommendedRouteList.png" width="30%" style="border: 1px solid lightgray;">
+![](RecommendedRouteList.png)
 
 # Get Route's detail
 How to use `TATRecommendedRoutes` to get the route's detail by `getDetail` method.
@@ -35,7 +35,7 @@ How to use `TATRecommendedRoutes` to get the route's detail by `getDetail` metho
  3. When you click view on map will display route path on map.
 
 ### Get Route's detail
-<img src="RecommendedRouteDetail.png" width="30%" style="border: 1px solid lightgray;">
+![](RecommendedRouteDetail.png)
 
 ### Route on Map
-<img src="RecommendedRouteMap.png" width="30%" style="border: 1px solid lightgray;">
+![](RecommendedRouteMap.png)

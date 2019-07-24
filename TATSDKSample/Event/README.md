@@ -1,4 +1,4 @@
-# Find Events and Get Event's detail <a name="Events and Festivals"></a>
+# Find Events and Get Event's detail
 
 This sample demonstrates how to use `TATEvents` to get the list of events and how to get event's detail from TAT SDK.
 
@@ -15,10 +15,10 @@ How to use `TATEvents` to find the list of events by `find` method or find the l
 
 
 ### Find Events
-<img src="GetEvents_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](GetEvents_ios.png)
 
 ### Sort options
-<img src="SortOptions_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](SortOptions_ios.png)
 
 # Get Event's detail
 How to use `TATEvents` to get the event's detail by `getDetail` method with event id.
@@ -31,4 +31,4 @@ How to use `TATEvents` to get the event's detail by `getDetail` method with even
  2. Show the result of the selected event.
 
 ### Get Event's detail
-<img src="EventDetail_ios.png" width="30%" style="border: 1px solid lightgray;">
+![](EventDetail_ios.png)
